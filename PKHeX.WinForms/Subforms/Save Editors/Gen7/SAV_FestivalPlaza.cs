@@ -647,5 +647,10 @@ namespace PKHeX.WinForms
             B_AgentGlass.Enabled = false;
             System.Media.SystemSounds.Asterisk.Play();
         }
+
+        private void B_RemoveTradeBan_Click(object sender, EventArgs e)
+        {
+            SAV.SetData(new byte[] { 0 }, SAV.JoinFestaData + 0x2E7C);
+        }
     }
 }
